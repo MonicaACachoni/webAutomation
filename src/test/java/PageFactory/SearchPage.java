@@ -7,14 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.UtilitiesBelt;
 
 public class SearchPage {
 
     WebDriver driver;
     WebDriverWait wait;
-    static UtilitiesBelt tool = new UtilitiesBelt();
-
+  
     @FindBy(id = "h_search-input")
     WebElement searchField;
 
@@ -26,22 +24,20 @@ public class SearchPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickSearhOption(){
+    public void clickSearchOption(final String arg1){
         System.out.println("Clicking Search  option...");
         wait.until(ExpectedConditions.elementToBeClickable(searchField));
-        searchField.click();
-        searchField.sendKeys("aaa");
+        searchField.sendKeys(arg1);
+        searchField.submit();
     }
 
-    public void clickSuppliersMenuOption(){
+    public void clickSuppliersMenuOption(String arg1){
         System.out.println("Clicking Suppliers menu option...");
-        //wait.until(ExpectedConditions.elementToBeClickable(suppliersMenuOption));
-       // suppliersMenuOption.click();
+        clickSearchOption(arg1);
+
     }
 
-    public void accessSuppliersManagementPage(){
-       // this.clickAccountsMenuOption();
-        this.clickSuppliersMenuOption();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, \"panel-heading\")][contains(text(), \"Suppliers Management\")]")));
+    public void accessSuppliersManagementPage(String arg1){
+        this.clickSuppliersMenuOption(arg1);
     }
 }

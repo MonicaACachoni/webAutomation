@@ -1,48 +1,51 @@
 package org.training;
 
+import java.io.File;
+import java.io.IOException;
+
+import com.intuit.karate.FileUtils;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import PageFactory.LoginPage;
 import PageFactory.SearchPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import utils.UtilitiesBelt;
+
+
 
 public class StepDefinition {
 
     public static WebDriver driver = new ChromeDriver();
 
     static WebDriverWait wait = new WebDriverWait(driver, 30);
-    static UtilitiesBelt tool = new UtilitiesBelt();
 
+    static SearchPage objSearch = new SearchPage(driver);
+    static LoginPage objLogin = new LoginPage(driver);
+
+    public void Print(final String nomePrint) throws IOException {
+        final File foto = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copy(foto, new File("C:\\Evidencias\\" + nomePrint + ".png"));
+    }
 
     String sign_in_url = "https://submarino.com.br";
-
-
-    String newSupplier_firstname = tool.firstNameGenerator();
-    String newSupplier_lastname = tool.lastNameGenerator();
-    String newSupplier_email = newSupplier_firstname + "@" + newSupplier_lastname + ".com";
-    String newSupplier_password = tool.passwordGenerator(12);
-    String newSupplier_mobileNumber = tool.phoneGenerator(9);;
-    String newSupplier_address1 = tool.address1Generator();
-    String newSupplier_address2 = tool.address2Generator();
-    String newSupplier_itemName = newSupplier_lastname + "'s Inn";
-
-   // static LoginPage objLogin = new LoginPage(driver);
-    static SearchPage objHome;
-  //  static SuppliersMgmtPage objSuppliersMgmt;
-   // static AddSupplierPage objAddSupplier;
-
+    
     @Given("^the user \"([^\"]*)\" is logged in to Submarino Site$")
-    public void the_user_is_logged_in_to_Submarino_Site(String arg1) throws Throwable {
-        
+    public void the_user_is_logged_in_to_Submarino_Site(final String arg1) throws Throwable {
+        System.out.println("Passo - 1 Abre o Site");
+        Print("Evidencia-01 - Home Site");
+        objLogin.getLoginPage(driver, sign_in_url);
+        driver.manage().window().maximize();
     }
 
     @When("^product \"([^\"]*)\" are searched$")
-    public void product_are_searched(String arg1) throws Throwable {
-        
+    public void product_are_searched(final String arg1) throws Throwable {
+        objSearch.clickSuppliersMenuOption(arg1);
     }
 
     @Then("^product in shown as available")

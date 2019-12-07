@@ -9,4 +9,5 @@ Feature: Select a product at Submarino
 
     Examples:
     | user    | product      | 
-    | Monica  | Harry Potter |
+    | Pedro   | Harry Potter |
+    | Joao    | Star Wars    |

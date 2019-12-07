@@ -51,11 +51,19 @@ formatter.examples({
     },
     {
       "cells": [
-        "Monica",
+        "Pedro",
         "Harry Potter"
       ],
       "line": 12,
       "id": "select-a-product-at-submarino;1---\"search”-a-product;;2"
+    },
+    {
+      "cells": [
+        "Joao",
+        "Star Wars"
+      ],
+      "line": 13,
+      "id": "select-a-product-at-submarino;1---\"search”-a-product;;3"
     }
   ],
   "keyword": "Examples"
@@ -76,7 +84,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 6,
-  "name": "the user \"Monica\" is logged in to Submarino Site",
+  "name": "the user \"Pedro\" is logged in to Submarino Site",
   "matchedColumns": [
     0
   ],
@@ -98,14 +106,14 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "Monica",
+      "val": "Pedro",
       "offset": 10
     }
   ],
   "location": "StepDefinition.the_user_is_logged_in_to_Submarino_Site(String)"
 });
 formatter.result({
-  "duration": 12904239900,
+  "duration": 21807152200,
   "status": "passed"
 });
 formatter.match({
@@ -118,14 +126,82 @@ formatter.match({
   "location": "StepDefinition.product_are_searched(String)"
 });
 formatter.result({
-  "duration": 111800,
+  "duration": 6072101400,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clicks_On_Add_Button()"
 });
 formatter.result({
-  "duration": 34500,
+  "duration": 31000,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "1 - \"SEARCH” a product",
+  "description": "",
+  "id": "select-a-product-at-submarino;1---\"search”-a-product;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@Test"
+    }
+  ]
+});
+formatter.step({
+  "line": 6,
+  "name": "the user \"Joao\" is logged in to Submarino Site",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "product \"Star Wars\" are searched",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "product in shown as available",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Joao",
+      "offset": 10
+    }
+  ],
+  "location": "StepDefinition.the_user_is_logged_in_to_Submarino_Site(String)"
+});
+formatter.result({
+  "duration": 3566203100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Star Wars",
+      "offset": 9
+    }
+  ],
+  "location": "StepDefinition.product_are_searched(String)"
+});
+formatter.result({
+  "duration": 4340691400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefinition.clicks_On_Add_Button()"
+});
+formatter.result({
+  "duration": 24800,
   "status": "passed"
 });
 });
