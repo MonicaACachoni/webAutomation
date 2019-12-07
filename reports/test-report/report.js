@@ -113,7 +113,7 @@ formatter.match({
   "location": "StepDefinition.the_user_is_logged_in_to_Submarino_Site(String)"
 });
 formatter.result({
-  "duration": 16939283300,
+  "duration": 19412435900,
   "status": "passed"
 });
 formatter.match({
@@ -126,14 +126,14 @@ formatter.match({
   "location": "StepDefinition.product_are_searched(String)"
 });
 formatter.result({
-  "duration": 4392726700,
+  "duration": 4073100800,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clicks_On_Add_Button()"
 });
 formatter.result({
-  "duration": 35100,
+  "duration": 27700,
   "status": "passed"
 });
 formatter.scenario({
@@ -181,7 +181,7 @@ formatter.match({
   "location": "StepDefinition.the_user_is_logged_in_to_Submarino_Site(String)"
 });
 formatter.result({
-  "duration": 4246754500,
+  "duration": 3961081400,
   "status": "passed"
 });
 formatter.match({
@@ -194,14 +194,14 @@ formatter.match({
   "location": "StepDefinition.product_are_searched(String)"
 });
 formatter.result({
-  "duration": 5135017300,
+  "duration": 4525393800,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clicks_On_Add_Button()"
 });
 formatter.result({
-  "duration": 30600,
+  "duration": 25900,
   "status": "passed"
 });
 });

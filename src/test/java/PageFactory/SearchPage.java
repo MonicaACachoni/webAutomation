@@ -1,6 +1,7 @@
 package PageFactory;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,7 +29,7 @@ public class SearchPage {
         System.out.println("Clicking Search  option...");
         wait.until(ExpectedConditions.elementToBeClickable(searchField));
         searchField.sendKeys(arg1);
-        searchField.submit();
+        searchField.sendKeys(Keys.RETURN);
     }
 
     public void clickSuppliersMenuOption(String arg1){

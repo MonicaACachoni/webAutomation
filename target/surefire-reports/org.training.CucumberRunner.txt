@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.training.CucumberRunner
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.396 s - in org.training.CucumberRunner
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.966 s - in org.training.CucumberRunner
