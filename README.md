@@ -46,8 +46,8 @@ Após realizar o setup informado acima, execute os cenários de teste automatiza
 
 ## Docker e Jenkinsfile
 
-* *docker run -d -p 5000:5000 my_web_app
+* docker run -d -p 5000:5000 my_web_app
 
-* *docker build -t my_web_app:latest .
+* docker build -t my_web_app:latest .
 
-* * Configurar Jenkins em localhost e start no job
+* Configurar Jenkins em localhost e start no job
