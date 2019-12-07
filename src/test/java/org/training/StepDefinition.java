@@ -50,6 +50,6 @@ public class StepDefinition {
 
     @Then("^product in shown as available")
     public void clicks_On_Add_Button(){
-        
+        //TODO: make the proper asserts over here
     }
 }
