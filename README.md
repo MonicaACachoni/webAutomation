@@ -9,7 +9,7 @@
 
 * *Para documentar os cenários especificados seguindo BDD*: **Cucumber**
 * *Linguagem de programação*: **Java**
-* *IDE*: **IntelliJ Community**
+* *IDE*: **Visual Studio Code - Version 1.40.2**
 * *Bibliotecas*:
 >* 		**Selenium**
 >*		**JUnit**
